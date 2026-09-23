@@ -8,9 +8,9 @@ export const batches = [
 ]
 
 export const resources = [
-  { type: 'Book', title: 'IELTS Reading', subtitle: 'Practice with purpose', mark: 'R' },
-  { type: 'Book', title: 'IELTS Writing', subtitle: 'Build stronger answers', mark: 'W' },
-  { type: 'Guide', title: 'Band Strategy', subtitle: 'Know what examiners reward', mark: '8+' },
+  { type: 'Book', title: 'IELTS Reading', subtitle: 'শুধু পড়া না, strategy মেনে practice করুন।', mark: 'R' },
+  { type: 'Book', title: 'IELTS Writing', subtitle: 'আপনার ideas সাজিয়ে লিখুন আরও clear answer।', mark: 'W' },
+  { type: 'Guide', title: 'Band Strategy', subtitle: 'Examiner কী দেখেন, বুঝে নিন scoring criteria।', mark: '8+' },
 ]
 
 export const updates = [

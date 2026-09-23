@@ -3,6 +3,6 @@ export default function SectionHeading({ label, title, accent, copy, center = fa
   return <div className={`section-heading ${center ? 'section-heading-center' : ''}`}>
     <div className={`section-label ${light ? 'light-label' : ''}`}>{label}</div>
     <h2><AnimatedText>{title}</AnimatedText> {accent && <em><AnimatedText>{accent}</AnimatedText></em>}</h2>
-    {copy && <p>{copy}</p>}
+    {copy && <p lang="bn">{copy}</p>}
   </div>
 }

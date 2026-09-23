@@ -8,7 +8,7 @@ export default function PageHero({ eyebrow, title, accent, description, actions,
         <div className="page-hero-copy">
           <div className={`micro-label ${dark ? 'light-label' : ''}`}><span/>{eyebrow}</div>
           <h1><AnimatedText>{title}</AnimatedText> {accent && <em><AnimatedText>{accent}</AnimatedText></em>}</h1>
-          <p>{description}</p>
+          <p lang="bn">{description}</p>
           {actions && <div className="hero-actions">{actions}</div>}
         </div>
         {stats && <div className="page-stats">{stats.map(([value,label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>}

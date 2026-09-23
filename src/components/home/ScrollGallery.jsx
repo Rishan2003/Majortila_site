@@ -16,7 +16,7 @@ export default function ScrollGallery() {
     <div className="story-stage">
       <div className="story-orbit" aria-hidden="true"/>
       <div className="container story-heading">
-        <SectionHeading light label="04 / REAL PEOPLE. REMARKABLE MOMENTS." title="HARD WORK." accent="BIG ENERGY." copy="Behind every score, a story worth celebrating. Meet our Band 8 achievers."/>
+        <SectionHeading light label="04 / REAL PEOPLE. REMARKABLE MOMENTS." title="HARD WORK." accent="BIG ENERGY." copy="প্রতিটি score-এর পেছনে আছে চেষ্টা আর নিয়মিত practice। পরিচিত হোন আমাদের Band 8 achievers-দের সাথে।"/>
         <div className="story-controls"><span>KEEP SCROLLING. MEET THE NEXT CHAPTER.</span><div><button onClick={() => move(-1)} aria-label="Previous student"><Arrow/></button><button onClick={() => move(1)} aria-label="Next student"><Arrow/></button></div></div>
       </div>
       <div className="story-viewport" ref={viewport} data-story-viewport tabIndex="0" aria-label="Student photo collection; swipe or use the previous and next buttons">

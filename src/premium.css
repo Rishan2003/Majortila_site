@@ -590,3 +590,20 @@ html[data-motion=off] .scene-progress { transform: scaleX(1); }
   .home-registration-image { border-top-right-radius: 48px; }
   .home-registration-photo figcaption { margin-top: 18px; padding-top: 16px; }
 }
+
+/* Local Bengali fallback keeps mixed-language copy readable, including offline. */
+body { font-family: 'Manrope', 'HEXA Bengali', sans-serif; }
+p, blockquote, figcaption, .scene-photo-bottom, .floating-note, .hero-social-proof, .resource-card, .batch-board, .facility-statement, .process-grid, .method-flow, .check-list, input, textarea {
+  font-family: 'Manrope', 'HEXA Bengali', sans-serif;
+}
+p:lang(bn), blockquote:lang(bn) { letter-spacing: normal; line-height: 1.9; }
+.scene-copy p { min-height: 0; }
+.scene-photo-bottom { letter-spacing: normal; }
+.home-registration-photo figcaption > span:last-child { font-size: 13px; }
+.hero-social-proof strong { font-size: 12px; }
+.hero-social-proof > div > span { font-size: 11px; }
+.floating-note strong { font-family: 'Manrope', 'HEXA Bengali', sans-serif; font-size: 12px; line-height: 1.5; }
+@media (max-width: 600px) {
+  .scene-photo-bottom { font-size: 10px; }
+  .floating-note strong { font-size: 11px; }
+}
