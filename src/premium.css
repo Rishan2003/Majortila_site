@@ -79,10 +79,10 @@ h2 { font-size: clamp(2.5rem,4.1vw,4rem); line-height: 1.08; }
 .kinetic-art { --pointer-x: 0; --pointer-y: 0; position: relative; height: 490px; min-width: 0; perspective: 1200px; touch-action: pan-y; }
 .hero-art-parallax { position: absolute; inset: 35px 10px 40px 0; transform: translate3d(calc(var(--pointer-x) * 30px),calc(var(--pointer-y) * 22px + var(--hero-scroll) * 75px),0) rotateX(calc(var(--pointer-y) * -8deg)) rotateY(calc(var(--pointer-x) * 10deg)); transition: transform .65s var(--ease); transform-style: preserve-3d; }
 .scene-deck { position: relative; height: 100%; animation: deck-float 7s ease-in-out infinite; }
-.scene-photo { position: absolute; inset: 0; background: #fff; color: #111832; border: 1px solid #ffffffa6; padding: 14px 14px 0; border-radius: 5px; box-shadow: 0 35px 65px #0005; transform-origin: 65% 70%; transition: transform 1.25s var(--ease),filter 1s,opacity 1s; backface-visibility: hidden; }
-.scene-photo.position-0 { z-index: 3; transform: rotate(-6deg) translate(0,0); opacity: 1; filter: brightness(1); }
-.scene-photo.position-1 { z-index: 2; transform: rotate(7deg) translate(17px,-10px) scale(.96); opacity: .92; filter: brightness(.7); }
-.scene-photo.position-2 { z-index: 1; transform: rotate(16deg) translate(27px,-19px) scale(.91); opacity: .72; filter: brightness(.55); }
+.scene-photo { position: absolute; inset: 0; background: #fff; color: #111832; border: 1px solid #ffffffa6; padding: 14px 14px 0; border-radius: 5px; box-shadow: 0 35px 65px #0005; transform-origin: 35% 70%; transition: transform 1.25s var(--ease),filter 1s,opacity 1s; backface-visibility: hidden; }
+.scene-photo.position-0 { z-index: 3; transform: rotate(6deg) translate(0,0); opacity: 1; filter: brightness(1); }
+.scene-photo.position-1 { z-index: 2; transform: rotate(-7deg) translate(-17px,-10px) scale(.96); opacity: .92; filter: brightness(.7); }
+.scene-photo.position-2 { z-index: 1; transform: rotate(-16deg) translate(-27px,-19px) scale(.91); opacity: .72; filter: brightness(.55); }
 .scene-photo-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; height: 31px; padding-bottom: 12px; font-size: 8px; letter-spacing: 1px; font-weight: 800; }
 .scene-photo-top>b { color: var(--red); font-size: 7px; letter-spacing: .6px; }
 .scene-photo-image { height: calc(100% - 89px); overflow: hidden; border-radius: 2px; }
@@ -556,4 +556,20 @@ html[data-motion=off] .scene-progress { transform: scaleX(1); }
   .hero-art-parallax,.kinetic-copy,.hero-ghost-word,.experience-media>img,.experience-inset { transform: none !important; }
   .scene-photo-image img { transform: none; }
   .scene-progress { transform: scaleX(1); }
+}
+
+/* Registration photo reuses the facilities section's main image. */
+.test-banner { grid-template-columns: minmax(220px, .8fr) minmax(0, 1.4fr) auto; }
+.test-media { overflow: hidden; border-radius: 5px; }
+.test-media img { display: block; width: 100%; height: 300px; object-fit: cover; }
+@media (max-width: 1100px) {
+  .test-banner { grid-template-columns: minmax(200px, .8fr) minmax(0, 1.4fr); }
+  .test-media { grid-row: span 2; }
+  .test-banner > .button { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 600px) {
+  .test-banner { grid-template-columns: minmax(0, 1fr); }
+  .test-media { grid-row: auto; }
+  .test-media img { height: 280px; }
+  .test-banner > .button { grid-column: 1; }
 }
