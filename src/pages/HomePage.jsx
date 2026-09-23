@@ -23,7 +23,21 @@ export default function HomePage({ navigate }) {
       <div className="experience-points">{[['01','Space to practise','Build familiarity in computer labs and a real IELTS test environment.','/facilities'],['02','Care that goes further','Work through reading, writing, listening and speaking challenges with focused support.','/facilities/speaking-care'],['03','A voice that’s your own','Keep the conversation going in the AI Speaking Zone and Speakers’ Cafe.','/facilities/ai-speaking-zone']].map(([n,t,p,url])=><a className="reveal" href={`#${url}`} key={n}><span>{n}</span><div><h3>{t}</h3><p>{p}</p></div><Arrow/></a>)}</div><button className="button button-primary" onClick={() => navigate('/facilities')}>Discover student care <Arrow/></button></div>
     </div></section>
     <ScrollGallery/>
-    <section className="test-section"><div className="container test-banner reveal"><div className="test-media"><img src="./images/venue2.webp" alt="HEXA’S IELTS on Computer test centre entrance in Majortila" loading="lazy" width="900" height="1100"/></div><div><div className="section-label">FROM PREPARATION TO TEST DAY</div><h2><AnimatedText>You’ve put in the work.</AnimatedText><br/><em><AnimatedText>Let’s take the next step.</AnimatedText></em></h2><p>Get personal guidance with your IELTS test type, documents and registration.</p></div><button className="button button-primary" onClick={() => navigate('/exam-registration')}>IELTS registration <Arrow/></button></div></section>
+    <section className="home-registration" aria-labelledby="home-registration-title">
+      <div className="container home-registration-layout">
+        <div className="home-registration-copy reveal">
+          <div className="section-label">FROM PREPARATION TO TEST DAY</div>
+          <span className="home-registration-arrow" aria-hidden="true">↗</span>
+          <h2 id="home-registration-title"><AnimatedText>You’ve put in the work.</AnimatedText><em><AnimatedText>Let’s take the next step.</AnimatedText></em></h2>
+          <p>Get personal guidance with your IELTS test type, documents and registration.</p>
+          <button className="button button-primary" onClick={() => navigate('/exam-registration')}>IELTS registration <Arrow/></button>
+        </div>
+        <figure className="home-registration-photo reveal">
+          <div className="home-registration-image"><img src="./images/venue2.webp" alt="HEXA’S IELTS on Computer test centre entrance in Majortila" loading="lazy" width="1280" height="960"/></div>
+          <figcaption><span>HEXA’S MAJORTILA</span><span>Your next chapter starts here. <Arrow size={18}/></span></figcaption>
+        </figure>
+      </div>
+    </section>
     <section className="resources-section paper-section"><div className="container"><div className="split-heading"><SectionHeading label="05 / KEEP YOUR MOMENTUM" title="Your learning doesn’t" accent="stop at the door." copy="Join our clubs"/><a href="#/facilities" className="link-button">Explore learning support <Arrow/></a></div><div className="resource-grid">{resources.map((r,i)=><a className="resource-card reveal" href={i===0?'#/facilities/reading-care':i===1?'#/facilities/writing-care':'#/facilities'} key={r.title}><div className="resource-top"><span>{r.type} / Learning support</span><Arrow/></div><strong>{r.mark}</strong><h3>{r.title}</h3><p>{r.subtitle}</p></a>)}</div></div></section>
     <section className="batches-section"><div className="container batches-layout"><div><SectionHeading label="06 / YOUR NEXT MOVE" title="Make room for" accent="your ambition." copy="Choose a time that suits you with our morning, afternoon, and evening batches."/><button className="button button-primary" onClick={() => navigate('/contact')}>Find my next batch <Arrow/></button></div><div className="batch-board">{[['Morning','Start the day with purpose.'],['Afternoon','Build a routine that works.'],['Evening','Keep moving after a busy day.']].map(([t,p],i)=><a href="#/contact" className="reveal" key={t}><span>0{i+1}</span><div><h3>{t} batch</h3><p>{p}</p></div><Arrow/></a>)}</div></div></section>
     <section className="updates-section"><div className="container"><div className="split-heading"><SectionHeading label="FROM THE STUDY DESK" title="Good questions." accent="Better preparation."/></div><div className="updates-grid">{updates.map(([date,category,title],i)=><a href="#/contact" className="reveal" key={title}><span className="update-category">{category}</span><h3>{title}</h3><div>Ask our team <Arrow/></div></a>)}</div></div></section>

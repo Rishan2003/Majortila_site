@@ -558,18 +558,35 @@ html[data-motion=off] .scene-progress { transform: scaleX(1); }
   .scene-progress { transform: scaleX(1); }
 }
 
-/* Registration photo reuses the facilities section's main image. */
-.test-banner { grid-template-columns: minmax(220px, .8fr) minmax(0, 1.4fr) auto; }
-.test-media { overflow: hidden; border-radius: 5px; }
-.test-media img { display: block; width: 100%; height: 300px; object-fit: cover; }
-@media (max-width: 1100px) {
-  .test-banner { grid-template-columns: minmax(200px, .8fr) minmax(0, 1.4fr); }
-  .test-media { grid-row: span 2; }
-  .test-banner > .button { grid-column: 2; justify-self: start; }
+/* A full registration section, with room for both the message and venue. */
+.home-registration { background: var(--red); color: white; padding: 112px 0; position: relative; overflow: hidden; }
+.home-registration::before { content: ''; position: absolute; width: 680px; height: 680px; right: -270px; top: -360px; border: 1px solid #ffffff25; border-radius: 50%; pointer-events: none; }
+.home-registration-layout { position: relative; display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(40px, 5vw, 80px); }
+.home-registration-copy .section-label { color: white; }
+.home-registration-arrow { display: block; font-size: 66px; font-weight: 400; line-height: 1; margin: 30px 0 22px; }
+.home-registration-copy h2 { font-size: clamp(36px, 3.5vw, 52px); line-height: 1.13; letter-spacing: -1.8px; margin: 0; }
+.home-registration-copy h2 em { display: block; color: white; margin-top: 8px; }
+.home-registration-copy p { max-width: 390px; margin: 26px 0 30px; font-size: 16px; line-height: 1.85; color: #fff; }
+.home-registration-copy .button { background: white; color: var(--red); min-height: 56px; gap: 28px; }
+.home-registration-copy .button:hover { background: var(--ink); color: white; }
+.home-registration-photo { min-width: 0; margin: 0; }
+.home-registration-image { overflow: hidden; border-radius: 5px 72px 5px 5px; box-shadow: 0 25px 65px #68081630; }
+.home-registration-image img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.home-registration-photo figcaption { border-top: 1px solid #ffffff50; margin-top: 24px; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
+.home-registration-photo figcaption > span:first-child { font-size: 9px; font-weight: 800; letter-spacing: 1.5px; }
+.home-registration-photo figcaption > span:last-child { display: flex; align-items: center; gap: 14px; font-size: 11px; }
+@media (max-width: 900px) {
+  .home-registration { padding: 80px 0; }
+  .home-registration-layout { grid-template-columns: minmax(0, 1fr); gap: 44px; max-width: 680px; }
+  .home-registration-copy h2 { max-width: 560px; font-size: clamp(36px, 6vw, 48px); }
+  .home-registration-copy p { max-width: 460px; }
+  .home-registration-arrow { margin: 24px 0 18px; font-size: 54px; }
 }
 @media (max-width: 600px) {
-  .test-banner { grid-template-columns: minmax(0, 1fr); }
-  .test-media { grid-row: auto; }
-  .test-media img { height: 280px; }
-  .test-banner > .button { grid-column: 1; }
+  .home-registration { padding: 64px 0; }
+  .home-registration-layout { gap: 36px; }
+  .home-registration-copy h2 { font-size: clamp(32px, 8.6vw, 43px); letter-spacing: -1.2px; }
+  .home-registration-copy p { font-size: 15px; margin: 22px 0 26px; }
+  .home-registration-image { border-top-right-radius: 48px; }
+  .home-registration-photo figcaption { margin-top: 18px; padding-top: 16px; }
 }
