@@ -607,3 +607,34 @@ p:lang(bn), blockquote:lang(bn) { letter-spacing: normal; line-height: 1.9; }
   .scene-photo-bottom { font-size: 10px; }
   .floating-note strong { font-size: 11px; }
 }
+
+/* Higher-contrast mixed-language copy; English display headings retain their type. */
+:root p:lang(bn), :root blockquote:lang(bn) {
+  color: #30364b;
+  font-family: 'Manrope', 'HEXA Bengali', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: normal;
+}
+:root :is(.kinetic-hero, .story-scroll, .page-hero-dark, .facility-hero,
+.registration-hero, .cta-band, .footer, .facility-card-featured) p:lang(bn),
+:root .resource-card:nth-child(2) p:lang(bn) { color: #f4f6ff; }
+.home-registration { background: #c81728; }
+:root .home-registration p:lang(bn) { color: #fff; }
+.facility-statement > span { color: #f4f6ff; font-size: 16px; font-weight: 500; }
+.method-flow article > span, .check-list { color: #30364b; font-size: 16px; font-weight: 500; }
+.hero-social-proof > div > span { color: #f4f6ff; font-size: 13px; }
+.hero-social-proof strong { font-size: 14px; line-height: 1.6; }
+.scene-photo-bottom { font-size: 14px; font-weight: 500; line-height: 1.5; }
+.floating-note strong { font-size: 14px; font-weight: 500; line-height: 1.6; }
+.home-registration-photo figcaption > span:last-child { font-size: 15px; font-weight: 500; }
+:root .form-note:lang(bn) { font-size: 14px; }
+@media (max-width: 600px) {
+  :root p:lang(bn), :root blockquote:lang(bn) { font-size: 16px; line-height: 1.85; }
+  .scene-photo-bottom { font-size: 12px; }
+  .floating-note strong { font-size: 12px; }
+  .hero-social-proof strong { font-size: 13px; }
+  .hero-social-proof > div > span { font-size: 12px; }
+  :root .form-note:lang(bn) { font-size: 14px; }
+}
