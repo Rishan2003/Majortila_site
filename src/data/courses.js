@@ -1,14 +1,171 @@
+// Course facts transcribed from the supplied HEXA’S Majortila course sheet.
 export const courses = [
-  { group: 'IELTS', title: 'IELTS Academic', fee: '৳16,000', duration: '2.5 months', classes: '28 classes', mode: 'On campus', accent: 'Most popular', desc: 'চারটি module জুড়ে structured preparation। সাথে guided practice, partial test, mock test আর feedback।', features: ['6 typing classes', '28 partial tests', '2 mock tests'] },
-  { group: 'IELTS', title: 'IELTS on Computer', fee: '৳25,000', duration: '2.5 months', classes: '30 classes', mode: 'Computer lab', accent: 'Premium', desc: 'Computer-এ IELTS দেওয়ার জন্য প্রস্তুত হোন। Lab practice-এ অভ্যস্ত হয়ে নিন test format-এর সাথে।', features: ['6 typing classes', '28 partial tests', '6 months lab access'] },
-  { group: 'Online', title: 'IELTS Online', fee: '৳12,000', duration: '2.5 months', classes: '28 classes', mode: 'Live online', accent: 'Flexible', desc: 'যেখানেই থাকুন, live class-এ শিখুন। Online-এই পাবেন practice আর feedback-এর সুযোগ।', features: ['20 partial tests', '2 mock tests', 'Live feedback'] },
-  { group: 'Intensive', title: 'HICU on Computer', fee: '৳12,000', duration: '21 days', classes: '36 sessions', mode: 'Intensive', accent: 'Fast-track', desc: 'অল্প সময়ে focused preparation। Lab practice আর প্রতিদিনের feedback-এ এগিয়ে নিন IELTS প্রস্তুতি।', features: ['Computer lab practice', 'Technical exam prep', 'Daily intensive sessions'] },
-  { group: 'English', title: 'Spoken English', fee: '৳5,000', duration: '2 months', classes: '24 classes', mode: 'On campus', accent: 'Confidence', desc: 'প্রতিদিনের কথাবার্তায় English হোক আরও সহজ। Speaking, pronunciation আর vocabulary নিয়ে practical learning।', features: ['Speaking care', "Speakers' Cafe", '3 progress exams'] },
-  { group: 'IELTS', title: 'IELTS Crash', fee: '৳18,000', duration: '1 month', classes: '28 classes', mode: 'On campus', accent: 'Focused', desc: 'Test সামনে, সময় কম? এক মাসের focused preparation-এ চারটি module নিয়ে কাজ করুন।', features: ['6 typing classes', '28 partial tests', '2 mock tests'] },
-  { group: 'IELTS', title: 'IELTS General Training', fee: '৳20,000', duration: '2.5 months', classes: '28 classes', mode: 'On campus', accent: 'General training', desc: 'Migration বা professional goal-এর জন্য General Training IELTS-এর চারটি module-এ focused preparation।', features: ['4-module strategy', 'Timed practice', '2 mock tests'] },
-  { group: 'IELTS', title: 'IELTS Life Skills', fee: '৳18,000', duration: '3 months', classes: '36 classes', mode: 'On campus', accent: 'UKVI', desc: 'A1 বা B1 Life Skills test-এর জন্য Speaking আর Listening নিয়ে নিয়মিত practice করুন।', features: ['A1 / B1 pathways', '10 mock tests', 'Speaking + listening focus'] },
-  { group: 'English', title: 'Grammar & Writing', fee: '৳5,000', duration: '2.5 months', classes: '24 classes', mode: 'On campus', accent: 'Foundation', desc: 'Sentence structure, grammar আর writing-এর foundation মজবুত করুন। লিখুন আরও clear আর confident ভাবে।', features: ['Foundation building', 'Writing practice', 'Progress exams'] },
-  { group: 'IELTS', title: 'IELTS Academic HICU', fee: '৳6,000', duration: '21 days', classes: '36 classes', mode: 'Intensive', accent: 'Bridge program', desc: 'Academic IELTS-এর জন্য short, intensive preparation। যেখানে improvement দরকার, সেখানেই focused practice।', features: ['Intensive training', 'Targeted correction', 'Short-cycle practice'] },
-  { group: 'IELTS', title: 'Reading for IELTS', fee: '৳5,000', duration: 'Focused module', classes: 'Specialist sessions', mode: 'On campus', accent: 'Skill course', desc: 'Reading-এর timing, question type আর vocabulary নিয়ে কাজ করুন। Passage বুঝে answer খুঁজে নেওয়া হোক সহজ।', features: ['Skimming & scanning', 'Question-type strategy', 'Time management'] },
-  { group: 'IELTS', title: 'Writing for IELTS', fee: '৳5,000', duration: 'Focused module', classes: 'Specialist sessions', mode: 'On campus', accent: 'Skill course', desc: 'Task 1 আর Task 2-তে ideas সাজানো, grammar আর vocabulary নিয়ে practice করুন। Feedback থেকে শিখে writing improve করুন।', features: ['Task 1 + Task 2', 'Structured feedback', 'Error correction'] },
+  {
+    "id": "ielts-premium",
+    "group": "IELTS",
+    "title": "IELTS Premium",
+    "fee": "৳18,000",
+    "discountFee": "৳15,000",
+    "duration": "3 months",
+    "classes": "30 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Premium",
+    "desc": "IELTS preparation-এ থাকছে 30টি class, mock ও partial test। সাথে support center আর one-to-one counselling।",
+    "features": [
+      "2 mock tests (IOC)",
+      "20 partial tests (IOC)",
+      "IELTS support center",
+      "One-to-one counselling",
+      "6 months club membership — free"
+    ]
+  },
+  {
+    "id": "ielts-regular",
+    "group": "IELTS",
+    "title": "IELTS Regular",
+    "fee": "৳16,000",
+    "discountFee": "৳12,000",
+    "duration": "3.5 months",
+    "classes": "40 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Regular",
+    "desc": "40টি class-এ সময় নিয়ে IELTS preparation করুন। Practice-এর জন্য mock ও partial test, সাথে personal support।",
+    "features": [
+      "2 mock tests (IOC)",
+      "20 partial tests (IOC)",
+      "IELTS support center",
+      "One-to-one counselling",
+      "6 months club membership — free"
+    ]
+  },
+  {
+    "id": "life-skills",
+    "group": "IELTS",
+    "title": "IELTS Life Skills",
+    "fee": "৳20,000",
+    "discountFee": "৳12,500",
+    "duration": "3 months",
+    "classes": "30 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Life Skills",
+    "desc": "তিন মাসের Life Skills preparation-এ থাকছে 30টি class আর 2টি mock test। সাথে support center ও counselling।",
+    "features": [
+      "2 mock tests",
+      "Support center",
+      "One-to-one counselling",
+      "6 months club membership — free"
+    ]
+  },
+  {
+    "id": "spoken-english",
+    "group": "English",
+    "title": "Spoken English",
+    "fee": "৳6,000",
+    "discountFee": "৳4,000",
+    "duration": "2.5 months",
+    "classes": "24 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Confidence",
+    "desc": "English-এ কথা বলার confidence বাড়ান। 24টি class-এর সাথে থাকছে 3টি exam আর one-to-one counselling।",
+    "features": [
+      "3 exams",
+      "One-to-one counselling",
+      "6 months club membership — free"
+    ]
+  },
+  {
+    "id": "basic-computer",
+    "group": "Computer & Design",
+    "title": "Basic Computer",
+    "fee": "৳5,000",
+    "discountFee": "৳3,000",
+    "duration": "2.5 months",
+    "classes": "24 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Digital skills",
+    "desc": "Computer শেখার শুরুটা হোক সহজ। আড়াই মাসে 24টি class আর শেখা যাচাই করতে 2টি exam।",
+    "features": [
+      "2 exams"
+    ]
+  },
+  {
+    "id": "graphic-design",
+    "group": "Computer & Design",
+    "title": "Graphic Design",
+    "fee": "৳15,000",
+    "discountFee": "৳8,000",
+    "duration": "4 months",
+    "classes": "26 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Creative skills",
+    "desc": "আপনার creative interest-কে নতুন skill-এ বদলে নিন। চার মাসে 26টি Graphic Design class আর 3টি exam।",
+    "features": [
+      "3 exams"
+    ]
+  },
+  {
+    "id": "grammar-writing",
+    "group": "English",
+    "title": "Grammar & Writing",
+    "fee": "৳5,000",
+    "discountFee": "৳3,000",
+    "duration": "2.5 months",
+    "classes": "24 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Foundation",
+    "desc": "Grammar আর writing-এর foundation মজবুত করুন। আড়াই মাসে 24টি class আর progress যাচাই করতে 3টি exam।",
+    "features": [
+      "3 exams"
+    ]
+  },
+  {
+    "id": "kids-english",
+    "group": "English",
+    "title": "Kids English",
+    "fee": "৳6,000",
+    "discountFee": "৳3,000",
+    "duration": "2.5 months",
+    "classes": "24 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Young learners",
+    "desc": "ছোটদের English শেখার journey শুরু হোক এখানেই। 24টি class, 3টি exam আর ছয় মাসের free club membership।",
+    "features": [
+      "3 exams",
+      "6 months club membership — free"
+    ]
+  },
+  {
+    "id": "cd-hicu",
+    "group": "Intensive",
+    "title": "CD HICU",
+    "fee": "৳9,000",
+    "discountFee": "৳6,000",
+    "duration": "1 month",
+    "classes": "21 classes",
+    "classDuration": "3 hours",
+    "accent": "Intensive",
+    "desc": "এক মাসের focused preparation—21টি class, প্রতিটি 3 ঘণ্টার। সাথে IOC mock ও partial test আর counselling।",
+    "features": [
+      "1 mock test (IOC)",
+      "4 partial tests (IOC)",
+      "2 months club membership",
+      "One-to-one counselling"
+    ]
+  },
+  {
+    "id": "junior-spoken",
+    "group": "English",
+    "title": "Junior Spoken",
+    "fee": "৳6,000",
+    "discountFee": "৳3,500",
+    "duration": "2.5 months",
+    "classes": "24 classes",
+    "classDuration": "1 hr 30 min",
+    "accent": "Junior learners",
+    "desc": "Junior learners-দের English speaking practice-এর জন্য 24টি class। সাথে 3টি exam আর ছয় মাসের club membership।",
+    "features": [
+      "3 exams",
+      "6 months club membership"
+    ]
+  }
 ]

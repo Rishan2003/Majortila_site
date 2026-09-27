@@ -638,3 +638,16 @@ p:lang(bn), blockquote:lang(bn) { letter-spacing: normal; line-height: 1.9; }
   .hero-social-proof > div > span { font-size: 12px; }
   :root .form-note:lang(bn) { font-size: 14px; }
 }
+
+/* Updated course sheet: show full and discounted fees together. */
+.home-course-fee { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; margin-top: 22px; color: #444b60; font-size: 11px; }
+.home-course-fee > span:first-child { display: flex; flex-direction: column; gap: 3px; }
+.home-course-fee strong { color: var(--navy); font-size: 25px; font-weight: 800; }
+.home-course-fee del { margin-left: 4px; font-size: 13px; }
+.course-card-grid footer .course-price { display: flex; flex-direction: column; gap: 4px; }
+.course-price > small del { margin-left: 5px; font-size: 14px; }
+.course-price > span { color: #444b60; font-size: 11px; }
+.course-card-grid footer { flex-wrap: wrap; gap: 18px; }
+.course-card-grid footer .course-price > strong { font-size: 28px; }
+.course-card-meta > div { min-width: 0; }
+.course-card-meta strong { overflow-wrap: normal; }

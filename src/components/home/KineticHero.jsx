@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import Arrow from '../ui/Arrow.jsx'
 const scenes = [
-  { name: 'IELTS on Computer', short: 'IELTS', kicker: 'AMBITION MEETS PREPARATION', first: 'THINK', last: 'BEYOND.', copy: 'শুধু একটা score না, সামনে এগিয়ে যাওয়ার confidence। HEXA’S Majortila-তে IELTS preparation হোক আপনার next step-এর শুরু।', image: './images/computer.webp', alt: 'Students practising in the HEXA’S computer lab', caption: 'Real practice, নতুন possibilities।', tag: 'ON COMPUTER', note: 'আপনার next chapter শুরু এখানেই।' },
+  { name: 'IELTS Premium', short: 'IELTS', kicker: 'AMBITION MEETS PREPARATION', first: 'THINK', last: 'BEYOND.', copy: 'শুধু একটা score না, সামনে এগিয়ে যাওয়ার confidence। HEXA’S Majortila-তে IELTS preparation হোক আপনার next step-এর শুরু।', image: './images/computer.webp', alt: 'Students practising in the HEXA’S computer lab', caption: 'Real practice, নতুন possibilities।', tag: 'IELTS PREMIUM', note: 'আপনার next chapter শুরু এখানেই।' },
   { name: 'Spoken English', short: 'SPOKEN', kicker: 'YOUR IDEAS DESERVE TO BE HEARD', first: 'OWN YOUR', last: 'VOICE.', copy: 'English-এ কথা বলতে আর জড়তা কেন? নিয়মিত practice-এ নিজের কথা বলুন সহজে, confidence-এর সাথে।', image: './images/classroom-presentation.webp', alt: 'A student presenting in a HEXA’S English classroom', caption: 'একসাথে শিখুন, নিজের মতো করে বলুন।', tag: 'SPEAK WITH CONFIDENCE', note: 'জড়তা কমুক, confidence বাড়ুক।' },
-  { name: 'HICU Intensive', short: 'HICU', kicker: 'BIG GOALS. FOCUSED PREPARATION.', first: 'MAKE IT', last: 'HAPPEN.', copy: 'সময় কম, target বড়? Focused practice আর personal feedback-এ প্রতিদিন এগিয়ে নিন আপনার IELTS preparation।', image: './images/venue2.webp', alt: 'The HEXA’S IELTS on Computer test centre', caption: 'Goal clear, এবার next step।', tag: 'INTENSIVE PREPARATION', note: 'প্রতিটি practice-এ একটু এগিয়ে যান।' },
+  { name: 'CD HICU', short: 'HICU', kicker: 'BIG GOALS. FOCUSED PREPARATION.', first: 'MAKE IT', last: 'HAPPEN.', copy: 'সময় কম, target বড়? Focused practice আর personal feedback-এ প্রতিদিন এগিয়ে নিন আপনার IELTS preparation।', image: './images/venue2.webp', alt: 'The HEXA’S IELTS on Computer test centre', caption: 'Goal clear, এবার next step।', tag: 'INTENSIVE PREPARATION', note: 'প্রতিটি practice-এ একটু এগিয়ে যান।' },
 ]
 const duration = 7200
 function LetterLine({ text, accent = false }) {
