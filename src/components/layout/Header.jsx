@@ -1,3 +1,4 @@
+import { PhoneLink } from '../../data/ContentContext.jsx'
 import { useEffect, useRef } from 'react'
 import Arrow from '../ui/Arrow.jsx'
 import Chevron from '../ui/Chevron.jsx'
@@ -27,6 +28,7 @@ export default function Header({ navigate, route, menuOpen, setMenuOpen }) {
         {link('/courses', 'Courses')}
         <details className="nav-dropdown"><summary>Student care <Chevron/></summary><div className="dropdown-panel">{link('/facilities','All facilities')}{Object.entries(facilities).map(([slug,item]) => <span key={slug}>{link(`/facilities/${slug}`,item.title)}</span>)}</div></details>
         {link('/exam-registration', 'IELTS registration')}
+        {link('/mock-partial-registration', 'Mock & partial')}
       </nav>
       <div className="nav-actions"><button className="button button-primary nav-cta" onClick={() => navigate('/contact')}>Let’s talk <Arrow size={17}/></button><button ref={menu} className={`menu-button ${menuOpen ? 'is-open' : ''}`} onClick={() => setMenuOpen(v => !v)} aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'}><span/><span/></button></div>
     </div>
@@ -34,8 +36,8 @@ export default function Header({ navigate, route, menuOpen, setMenuOpen }) {
       {link('/','Home')}{link('/courses','Explore courses')}{link('/about','Our story')}
       <details><summary>About HEXA’S <Chevron/></summary>{aboutLinks.map(([path,label]) => <span key={path}>{link(path,label)}</span>)}</details>
       <details><summary>Student care <Chevron/></summary>{link('/facilities','All facilities')}{Object.entries(facilities).map(([slug,item]) => <span key={slug}>{link(`/facilities/${slug}`,item.title)}</span>)}</details>
-      {link('/exam-registration','IELTS registration')}{link('/contact','Contact & counselling')}
-      <a className="mobile-phone" href="tel:+8801710764801">Call +880 1710-764801</a>
+      {link('/mock-partial-registration','Mock & partial registration')}{link('/exam-registration','IELTS registration')}{link('/contact','Contact & counselling')}
+      <PhoneLink className="mobile-phone" ></PhoneLink>
     </nav>}
   </header>
 }

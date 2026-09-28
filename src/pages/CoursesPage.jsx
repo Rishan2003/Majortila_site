@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Arrow from '../components/ui/Arrow.jsx'
 import PageHero from '../components/ui/PageHero.jsx'
-import { courses } from '../data/courses.js'
+import { useContent } from '../data/ContentContext.jsx'
 
 export default function CoursesPage({ navigate }) {
+  const {content:{courses}}=useContent()
   const [filter, setFilter] = useState('All')
   const groups = ['All', ...new Set(courses.map(course => course.group))]
   const visible = filter==='All' ? courses : courses.filter(c=>c.group===filter)

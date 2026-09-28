@@ -1,0 +1,245 @@
+{
+  "revision": 0,
+  "phone": "+880 1710-764801",
+  "officeHours": "Contact admissions for current opening hours",
+  "courses": [
+    {
+      "id": "ielts-premium",
+      "group": "IELTS",
+      "title": "IELTS Premium",
+      "fee": "৳18,000",
+      "discountFee": "৳15,000",
+      "duration": "3 months",
+      "classes": "30 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Premium",
+      "desc": "IELTS preparation-এ থাকছে 30টি class, mock ও partial test। সাথে support center আর one-to-one counselling।",
+      "features": [
+        "2 mock tests (IOC)",
+        "20 partial tests (IOC)",
+        "IELTS support center",
+        "One-to-one counselling",
+        "6 months club membership — free"
+      ]
+    },
+    {
+      "id": "ielts-regular",
+      "group": "IELTS",
+      "title": "IELTS Regular",
+      "fee": "৳16,000",
+      "discountFee": "৳12,000",
+      "duration": "3.5 months",
+      "classes": "40 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Regular",
+      "desc": "40টি class-এ সময় নিয়ে IELTS preparation করুন। Practice-এর জন্য mock ও partial test, সাথে personal support।",
+      "features": [
+        "2 mock tests (IOC)",
+        "20 partial tests (IOC)",
+        "IELTS support center",
+        "One-to-one counselling",
+        "6 months club membership — free"
+      ]
+    },
+    {
+      "id": "life-skills",
+      "group": "IELTS",
+      "title": "IELTS Life Skills",
+      "fee": "৳20,000",
+      "discountFee": "৳12,500",
+      "duration": "3 months",
+      "classes": "30 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Life Skills",
+      "desc": "তিন মাসের Life Skills preparation-এ থাকছে 30টি class আর 2টি mock test। সাথে support center ও counselling।",
+      "features": [
+        "2 mock tests",
+        "Support center",
+        "One-to-one counselling",
+        "6 months club membership — free"
+      ]
+    },
+    {
+      "id": "spoken-english",
+      "group": "English",
+      "title": "Spoken English",
+      "fee": "৳6,000",
+      "discountFee": "৳4,000",
+      "duration": "2.5 months",
+      "classes": "24 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Confidence",
+      "desc": "English-এ কথা বলার confidence বাড়ান। 24টি class-এর সাথে থাকছে 3টি exam আর one-to-one counselling।",
+      "features": [
+        "3 exams",
+        "One-to-one counselling",
+        "6 months club membership — free"
+      ]
+    },
+    {
+      "id": "basic-computer",
+      "group": "Computer & Design",
+      "title": "Basic Computer",
+      "fee": "৳5,000",
+      "discountFee": "৳3,000",
+      "duration": "2.5 months",
+      "classes": "24 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Digital skills",
+      "desc": "Computer শেখার শুরুটা হোক সহজ। আড়াই মাসে 24টি class আর শেখা যাচাই করতে 2টি exam।",
+      "features": [
+        "2 exams"
+      ]
+    },
+    {
+      "id": "graphic-design",
+      "group": "Computer & Design",
+      "title": "Graphic Design",
+      "fee": "৳15,000",
+      "discountFee": "৳8,000",
+      "duration": "4 months",
+      "classes": "26 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Creative skills",
+      "desc": "আপনার creative interest-কে নতুন skill-এ বদলে নিন। চার মাসে 26টি Graphic Design class আর 3টি exam।",
+      "features": [
+        "3 exams"
+      ]
+    },
+    {
+      "id": "grammar-writing",
+      "group": "English",
+      "title": "Grammar & Writing",
+      "fee": "৳5,000",
+      "discountFee": "৳3,000",
+      "duration": "2.5 months",
+      "classes": "24 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Foundation",
+      "desc": "Grammar আর writing-এর foundation মজবুত করুন। আড়াই মাসে 24টি class আর progress যাচাই করতে 3টি exam।",
+      "features": [
+        "3 exams"
+      ]
+    },
+    {
+      "id": "kids-english",
+      "group": "English",
+      "title": "Kids English",
+      "fee": "৳6,000",
+      "discountFee": "৳3,000",
+      "duration": "2.5 months",
+      "classes": "24 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Young learners",
+      "desc": "ছোটদের English শেখার journey শুরু হোক এখানেই। 24টি class, 3টি exam আর ছয় মাসের free club membership।",
+      "features": [
+        "3 exams",
+        "6 months club membership — free"
+      ]
+    },
+    {
+      "id": "cd-hicu",
+      "group": "Intensive",
+      "title": "CD HICU",
+      "fee": "৳9,000",
+      "discountFee": "৳6,000",
+      "duration": "1 month",
+      "classes": "21 classes",
+      "classDuration": "3 hours",
+      "accent": "Intensive",
+      "desc": "এক মাসের focused preparation—21টি class, প্রতিটি 3 ঘণ্টার। সাথে IOC mock ও partial test আর counselling।",
+      "features": [
+        "1 mock test (IOC)",
+        "4 partial tests (IOC)",
+        "2 months club membership",
+        "One-to-one counselling"
+      ]
+    },
+    {
+      "id": "junior-spoken",
+      "group": "English",
+      "title": "Junior Spoken",
+      "fee": "৳6,000",
+      "discountFee": "৳3,500",
+      "duration": "2.5 months",
+      "classes": "24 classes",
+      "classDuration": "1 hr 30 min",
+      "accent": "Junior learners",
+      "desc": "Junior learners-দের English speaking practice-এর জন্য 24টি class। সাথে 3টি exam আর ছয় মাসের club membership।",
+      "features": [
+        "3 exams",
+        "6 months club membership"
+      ]
+    }
+  ],
+  "schedules": {
+    "ai-speaking-zone": {
+      "title": "AI Speaking Zone",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "reading-care": {
+      "title": "Reading Care",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "writing-care": {
+      "title": "Writing Care",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "speaking-care": {
+      "title": "Speaking Care",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "listening-care": {
+      "title": "Listening Care",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "speakers-cafe": {
+      "title": "Speakers' Cafe",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    },
+    "one-to-one-counselling": {
+      "title": "One-to-One Counselling",
+      "days": "",
+      "start": "",
+      "end": "",
+      "location": "HEXA’S Majortila",
+      "note": "",
+      "status": "unannounced"
+    }
+  },
+  "tests": {
+    "mockFee": "Contact admissions",
+    "partialFee": "Contact admissions",
+    "schedule": "Contact admissions to confirm available test dates"
+  }
+}

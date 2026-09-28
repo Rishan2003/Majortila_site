@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/create-preview.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node scripts/test-api.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -14,5 +15,8 @@
     "react": "latest",
     "react-dom": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": "24.x"
+  }
 }

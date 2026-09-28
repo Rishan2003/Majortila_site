@@ -1,3 +1,5 @@
+import DashboardPage from '../pages/DashboardPage.jsx'
+import PracticeRegistrationPage from '../pages/PracticeRegistrationPage.jsx'
 import HomePage from '../pages/HomePage.jsx'
 import AboutPage from '../pages/about/AboutPage.jsx'
 import WhyChoosePage from '../pages/about/WhyChoosePage.jsx'
@@ -28,6 +30,8 @@ const facilityRoutes = {
 }
 
 export default function renderRoute(route, navigate) {
+  if (route === '/dashboard') return <DashboardPage />
+  if (route === '/mock-partial-registration') return <PracticeRegistrationPage />
   if (route === '/') return <HomePage navigate={navigate} />
   if (route === '/about') return <AboutPage navigate={navigate} />
   if (route === '/about/why-choose-us') return <WhyChoosePage navigate={navigate} />

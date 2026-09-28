@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useContent } from './data/ContentContext.jsx'
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import renderRoute from './router/renderRoute.jsx'
@@ -7,6 +8,7 @@ import { MotionControl, useMotion, useReveal } from './hooks/useMotion.jsx'
 import useScrollEffects from './hooks/useScrollEffects.js'
 function routeFromHash() { const raw = window.location.hash.replace(/^#/, ''); return raw.startsWith('/') ? raw : '/' }
 export default function App() {
+  const {online}=useContent()
   const [route, setRoute] = useState(routeFromHash)
   const [menuOpen, setMenuOpen] = useState(false)
   const [motion, setMotion] = useMotion()
@@ -27,6 +29,7 @@ export default function App() {
     <div className="reading-progress" aria-hidden="true"/>
     <a href="#main-content" className="skip-link" onClick={e => { e.preventDefault(); document.getElementById('main-content')?.focus() }}>Skip to content</a>
     <Header navigate={navigate} route={route} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+    {online===false && route!=='/dashboard' && <div className="content-offline" role="status">Latest updates are unavailable. Preview details are shown; please confirm prices and times with admissions.</div>}
     <main id="main-content" tabIndex="-1" key={route} className="route-content">{renderRoute(route, navigate)}</main>
     <Footer navigate={navigate}/>
     <MotionControl motion={motion} setMotion={setMotion}/>

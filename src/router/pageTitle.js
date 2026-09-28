@@ -2,6 +2,8 @@ import { facilities } from '../data/facilities.js'
 
 export default function pageTitle(route) {
   const map = {
+    '/dashboard': 'Site dashboard | HEXA’S Majortila',
+    '/mock-partial-registration': 'Mock & partial registration | HEXA’S Majortila',
     '/': "Hexa's Majortila | IELTS & English in Sylhet",
     '/about': "About Us | Hexa's Majortila",
     '/about/why-choose-us': "Why Choose Us | Hexa's Majortila",

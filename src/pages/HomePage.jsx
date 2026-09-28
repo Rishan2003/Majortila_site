@@ -4,9 +4,10 @@ import CtaBand from '../components/ui/CtaBand.jsx'
 import KineticHero from '../components/home/KineticHero.jsx'
 import ScrollGallery from '../components/home/ScrollGallery.jsx'
 import AnimatedText from '../components/ui/AnimatedText.jsx'
-import { courses } from '../data/courses.js'
+import { useContent } from '../data/ContentContext.jsx'
 import { resources, updates } from '../data/homeContent.js'
 export default function HomePage({ navigate }) {
+  const {content:{courses}}=useContent()
   const featured = ['ielts-premium', 'spoken-english', 'cd-hicu', 'ielts-regular', 'basic-computer', 'graphic-design'].map(id => courses.find(course => course.id === id))
   const photos = ['venue.webp','classroom-presentation.webp','computer.webp','computer-lab.webp','english-classroom.webp','welcome-class.webp']
   const photoAlts = ['Computer test preparation facilities at HEXA’S','English speaking practice in a HEXA’S classroom','Students practising in the HEXA’S computer lab','Computer workstations at HEXA’S','An English class at HEXA’S','Students attending a HEXA’S class']
