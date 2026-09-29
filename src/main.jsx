@@ -6,6 +6,7 @@ import './dashboard.css'
 import './styles.css'
 import './fonts.css'
 import './premium.css'
+import './mobile.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

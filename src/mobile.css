@@ -1,0 +1,128 @@
+/* Phone layouts: keep readable type and let content flow instead of shrinking it. */
+@media (max-width: 700px) {
+  html { scroll-padding-top: 88px; }
+  .container { width: calc(100% - 40px); }
+  .nav { height: 72px; gap: 12px; }
+  .nav-actions { gap: 6px; }
+  .menu-button { width: 44px; height: 44px; padding: 10px; }
+  .nav-cta { min-height: 44px; padding: 10px 12px; font-size: 13px; }
+  .brand img { width: 38px; height: 38px; }
+  .brand-wordmark>strong { font-size: 22px; }
+  .brand-wordmark>small { font-size: 8px; letter-spacing: .8px; }
+  .mobile-menu { max-height: calc(100dvh - 72px); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+  .mobile-menu>details a { font-size: 16px; min-height: 48px; padding: 12px; }
+  .site-contact-bar { padding: 8px 0; }
+  .site-contact-bar>.container { gap: 0 16px; }
+  .site-contact-bar span { display: none; }
+  .site-contact-bar a { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
+
+  .kinetic-hero-layout { grid-template-columns: minmax(0, 1fr); min-height: 0; padding: 36px 0 28px; gap: 32px; }
+  .kinetic-copy { transform: none; }
+  .hero-location { font-size: 11px; letter-spacing: .7px; gap: 8px; flex-wrap: wrap; }
+  .hero-kicker { font-size: 11px; letter-spacing: 1px; margin-top: 28px; }
+  .scene-copy h1 { font-size: clamp(42px, 12vw, 76px); line-height: 1.04; margin: 16px 0 24px; }
+  .scene-copy p { min-height: 0; max-width: none; }
+  .kinetic-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 26px; }
+  .kinetic-actions .button { width: 100%; justify-content: space-between; min-height: 56px; font-size: 15px; white-space: normal; padding: 10px 12px 10px 18px; gap: 12px; }
+  .magnetic-button>span { width: 36px; height: 36px; flex-shrink: 0; }
+  .campus-link { min-height: 48px; font-size: 14px; justify-content: center; gap: 12px; }
+  .campus-link>span { width: 32px; height: 32px; }
+  .hero-social-proof { margin-top: 22px; align-items: flex-start; gap: 12px; }
+  .proof-faces { flex-shrink: 0; padding-top: 4px; }
+  .hero-social-proof strong { font-size: 14px; }
+  .hero-social-proof>div>span { font-size: 13px; line-height: 1.7; }
+
+  /* One clear photograph; the result card is hidden on phones. */
+  .kinetic-art { width: 100%; max-width: none; height: auto; perspective: none; }
+  .hero-art-parallax { position: relative; inset: auto; transform: none; }
+  .scene-deck { height: auto; animation: none; }
+  .scene-photo { padding: 12px 12px 0; border-radius: 10px; box-shadow: none; }
+  .scene-photo.position-0 { position: relative; transform: none; }
+  .scene-photo.position-1,.scene-photo.position-2 { display: none; }
+  .scene-photo-top { height: auto; min-height: 32px; flex-wrap: wrap; gap: 6px 12px; font-size: 10px; padding-bottom: 12px; }
+  .scene-photo-top>b { font-size: 10px; letter-spacing: .3px; }
+  .scene-photo-image { height: auto; aspect-ratio: 4 / 3; }
+  .scene-photo-bottom { height: auto; min-height: 60px; padding: 14px 0; font-size: 14px; line-height: 1.65; }
+  .floating-note,.hero-orbit,.hero-asterisk,.hero-ghost-word { display: none; }
+  .floating-result { display: none; position: static; width: 100%; margin-top: 16px; padding: 18px 20px; border-radius: 8px; transform: none; animation: none; box-shadow: none; }
+  .result-label { font-size: 10px; letter-spacing: .7px; }
+  .floating-result>div { margin: 12px 0 8px; gap: 16px; }
+  .floating-result strong { font-size: 44px; letter-spacing: -2px; }
+  .floating-result>div>span { font-size: 12px; }
+  .floating-result small { font-size: 13px; }
+  .hero-bottom-bar { width: calc(100% - 40px); gap: 0; }
+  .scene-navigation { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) 44px; align-items: center; gap: 8px; }
+  .scene-tab { width: auto; min-width: 0; min-height: 68px; display: flex; justify-content: center; align-items: center; padding: 14px 0; }
+  .scene-tab>strong { font-size: 12px; }
+  .scene-tab>span,.scene-tab>small { display: none; }
+  .hero-pause { width: 44px; height: 44px; font-size: 16px; }
+  .ticker { transform: none; }
+
+  .section-heading h2,.split-heading h2,.experience-copy .section-heading h2,
+  .story-heading h2,.batches-layout h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.18; letter-spacing: -.04em; }
+  .page-hero h1,.facility-hero h1,.registration-hero h1 { font-size: clamp(34px, 9vw, 48px); line-height: 1.15; overflow-wrap: anywhere; }
+  .section-label,.micro-label,.page-hero .micro-label,.story-heading .section-label { font-size: 11px; line-height: 1.7; letter-spacing: 1px; }
+  .section-heading p,.page-hero p,.facility-hero p,.registration-hero p { font-size: 16px; line-height: 1.85; }
+  .home-courses,.resources-section,.batches-section,.content-section,.experience-section { padding: 56px 0; }
+  .editorial-courses,.course-card-grid,.facility-grid,.resource-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .editorial-course-body,.course-card-grid>article,.facility-card,.resource-card { padding: 24px 20px; min-width: 0; }
+  .course-photo { height: auto; aspect-ratio: 4 / 3; }
+  .editorial-course-body h3,.course-card-grid h3,.facility-card h3 { font-size: 26px; line-height: 1.25; }
+  .course-eyebrow { font-size: 12px; gap: 8px 16px; line-height: 1.6; }
+  .home-course-fee,.home-course-fee del,.course-price>span { font-size: 14px; }
+  .editorial-course-body>button { min-height: 48px; font-size: 15px; }
+  .course-card-grid li { font-size: 15px; line-height: 1.8; }
+  .page-stats>div>span { font-size: 12px; }
+  .course-card-meta { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .course-card-meta strong { font-size: 16px; }
+  .course-card-meta small { font-size: 13px; }
+  .course-card-grid footer button { max-width: none; width: 100%; font-size: 15px; }
+  .filter-pills { flex-wrap: wrap; gap: 8px; }
+  .filter-pills>button { min-height: 44px; font-size: 14px; padding: 10px 14px; }
+  .search-box { width: 100%; }
+  .button { min-height: 48px; font-size: 15px; }
+  .nav-cta { min-height: 44px; font-size: 13px; }
+  .experience-media { height: auto; margin: 0; }
+  .experience-media>img { width: 100%; height: auto; aspect-ratio: 4 / 5; transform: none; border-radius: 10px; }
+  .experience-media:before { display: none; }
+  .experience-inset { position: static; width: 100%; margin: 4px 0 0; transform: none; border: 0; border-radius: 10px; overflow: hidden; box-shadow: none; }
+  .experience-inset img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  .photo-label { position: relative; display: block; left: auto; bottom: auto; max-width: none; color: var(--muted); font-size: 11px; padding: 16px 0; }
+  .experience-points>a { gap: 12px; }
+  .experience-points h3 { line-height: 1.4; }
+  .story-controls>span,.story-bottom>span { font-size: 11px; line-height: 1.6; }
+  .story-controls button { width: 44px; height: 44px; }
+  .moment-caption>span:first-child { font-size: 11px; line-height: 1.6; }
+  .moment-caption h3 { font-size: 19px; line-height: 1.4; }
+  .moment-card:nth-child(even) { margin-top: 0; }
+  .story-bottom>a { font-size: 14px; min-height: 44px; }
+  .gallery-grid { columns: 1; }
+  .gallery-grid strong { font-size: 20px; }
+  .gallery-grid small { font-size: 13px; }
+  .gallery-zoom,.lightbox-controls>button,.lightbox-close { width: 44px; height: 44px; }
+  .method-flow { grid-template-columns: minmax(0, 1fr); }
+  .registration-ticket { width: 100%; transform: none; }
+  .registration-proof { flex-wrap: wrap; font-size: 13px; }
+  .contact-form,.admin-panel,.practice-info,.session-card { padding: 24px 18px; min-width: 0; }
+  .contact-form input,.contact-form select,.contact-form textarea,
+  .admin-panel input,.admin-panel select,.admin-panel textarea,.search-box input { font-size: 16px; min-width: 0; max-width: 100%; }
+  .contact-form label,.admin-panel label { font-size: 14px; }
+  .practice-info strong,.session-grid strong { overflow-wrap: anywhere; }
+  .cta-band-inner>div:last-child { flex-direction: column; align-items: stretch; }
+  .cta-band .button { width: 100%; }
+  .footer-links { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .footer-links>div:last-child { grid-column: auto; }
+  .footer-links>div { font-size: 15px; gap: 4px; }
+  .footer-links a { min-height: 44px; display: flex; align-items: center; }
+  .footer-bottom { flex-wrap: wrap; font-size: 12px; }
+  .footer-bottom>span { max-width: none; }
+  .footer-bottom button { font-size: 14px; min-height: 44px; }
+  .motion-control { position: static; margin: 16px 20px; min-height: 44px; font-size: 13px; }
+  .admin-shell~.motion-control { bottom: auto; }
+}
+@media (max-width: 359px) {
+  .container,.hero-bottom-bar { width: calc(100% - 32px); }
+  .nav-cta { display: none; }
+  .hero-location .label-line { display: none; }
+  .hero-social-proof { flex-direction: column; }
+}
