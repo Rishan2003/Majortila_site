@@ -91,3 +91,139 @@ export const facilities = {
     outcome: 'আপনার goal, routine আর current level-এর সাথে মানানসই preparation plan নিয়ে শুরু করুন।',
   },
 }
+
+Object.assign(facilities, {
+  "mock-test": {
+    "title": "Mock Test",
+    "kicker": "IELTS practice",
+    "mark": "MT",
+    "intro": "Practise in our computer test environment before your IELTS exam.",
+    "statement": "Prepare with a practice test.",
+    "points": [
+      [
+        "Test environment",
+        "Get familiar with the computer workstations and headphones."
+      ],
+      [
+        "Registration",
+        "Contact admissions to confirm the next available mock test."
+      ]
+    ],
+    "steps": [
+      "Choose a full mock or partial test",
+      "Confirm the session with admissions",
+      "Attend your practice test"
+    ],
+    "outcome": "Build familiarity with the test environment.",
+    "actionPath": "/mock-partial-registration",
+    "actionLabel": "Mock test registration",
+    "image": "./images/mock-test.jpg"
+  },
+  "hicu-zone": {
+    "title": "HICU Zone",
+    "kicker": "Focused preparation support",
+    "mark": "HZ",
+    "intro": "Visit the HICU Zone to discuss your preparation and the support available at HEXA’S Majortila.",
+    "statement": "Give your preparation a clear direction.",
+    "points": [
+      [
+        "Preparation guidance",
+        "Discuss your current preparation with the team."
+      ],
+      [
+        "Course information",
+        "Ask about CD HICU and the support included."
+      ]
+    ],
+    "steps": [
+      "Share your preparation goals",
+      "Discuss the available support",
+      "Confirm your next step"
+    ],
+    "outcome": "Find the support that fits your preparation.",
+    "image": "./images/hicu-zone.jpg"
+  },
+  "spoken-club": {
+    "title": "Spoken Club",
+    "kicker": "English conversation practice",
+    "mark": "SC",
+    "intro": "Join fellow learners for English conversation and group speaking practice.",
+    "statement": "Make room for conversation.",
+    "points": [
+      [
+        "Group practice",
+        "Use English in conversations with fellow learners."
+      ],
+      [
+        "Speaking confidence",
+        "Put your classroom learning into practice."
+      ]
+    ],
+    "steps": [
+      "Confirm the club schedule",
+      "Join a speaking session",
+      "Practise with fellow learners"
+    ],
+    "outcome": "Keep building confidence through conversation.",
+    "image": "./images/spoken-club.jpg"
+  },
+  "registration-corner": {
+    "title": "Registration Corner",
+    "kicker": "IELTS registration support",
+    "mark": "RC",
+    "intro": "Visit our IELTS Registration Corner for help with your test registration.",
+    "statement": "Take the next step towards your test.",
+    "points": [
+      [
+        "Registration guidance",
+        "Discuss your test type and preferred date with the registration team."
+      ],
+      [
+        "Next steps",
+        "Confirm the documents, availability and payment instructions with the team."
+      ]
+    ],
+    "steps": [
+      "Discuss your test requirements",
+      "Confirm the available dates and documents",
+      "Complete registration with the team"
+    ],
+    "outcome": "Get clear guidance for your IELTS registration.",
+    "actionPath": "/exam-registration",
+    "actionLabel": "Registration information",
+    "image": "./images/registration-corner.jpg"
+  },
+  "spoken-female": {
+    "title": "Spoken Female",
+    "kicker": "Speaking practice for women",
+    "mark": "SF",
+    "intro": "English speaking and presentation practice for female learners at HEXA’S Majortila.",
+    "statement": "Build confidence in your own voice.",
+    "points": [
+      [
+        "Speaking practice",
+        "Develop confidence using English with fellow female learners."
+      ],
+      [
+        "Presentation practice",
+        "Practise sharing your ideas in front of a group."
+      ]
+    ],
+    "steps": [
+      "Ask admissions about availability",
+      "Confirm your session",
+      "Join speaking and presentation practice"
+    ],
+    "outcome": "Grow more comfortable expressing your ideas in English.",
+    "image": "./images/spoken-female.jpg"
+  }
+})
+
+facilities['reading-club'] = {
+ title: 'Reading Club', kicker: 'Reading practice together', mark: 'RC', image: './images/reading-club.jpg',
+ intro: 'Join fellow learners for reading practice at HEXA’S Majortila.',
+ statement: 'Read, practise and build confidence.',
+ points: [['Reading practice', 'Spend time working through reading passages with fellow learners.'], ['Session information', 'Contact the team to confirm the next Reading Club session.']],
+ steps: ['Confirm the session schedule', 'Join the reading practice', 'Review your progress'],
+ outcome: 'Make reading practice part of your learning routine.'
+}

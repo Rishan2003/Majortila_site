@@ -7,4 +7,19 @@ export function ContentProvider({children}){
  return <Context.Provider value={{content,setContent,online}}>{children}</Context.Provider>
 }
 export const useContent=()=>useContext(Context)
-export function PhoneLink({children,...props}){const {content}=useContent();return <a {...props} href={`tel:${content.phone.replace(/[^+\d]/g,'')}`}>{children||content.phone}</a>}
+export const registrationPhone = '+8801334934850'
+export function contactNumber(content, registration) {
+ const route = window.location.hash.replace(/^#/, '')
+ const isRegistration = registration ?? ['/exam-registration','/mock-partial-registration','/facilities/registration-corner','/facilities/mock-test'].includes(route)
+ return isRegistration ? registrationPhone : content.phone
+}
+export function WhatsAppLink({children, registration, message = '', ...props}) {
+ const {content}=useContent()
+ const phone=contactNumber(content, registration).replace(/\D/g,'')
+ return <a {...props} href={'https://wa.me/'+phone+(message ? '?text='+encodeURIComponent(message) : '')} target="_blank" rel="noopener noreferrer">{children || 'WhatsApp'}</a>
+}
+export function PhoneLink({children, registration, message, ...props}) {
+ const {content}=useContent()
+ const phone=contactNumber(content, registration)
+ return <><a {...props} href={'tel:'+phone.replace(/[^+\d]/g,'')}>{children || 'Call '+phone}</a><WhatsAppLink registration={registration} message={message} className={props.className}>WhatsApp</WhatsAppLink></>
+}

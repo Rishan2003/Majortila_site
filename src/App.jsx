@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useContent } from './data/ContentContext.jsx'
+import { useContent, PhoneLink } from './data/ContentContext.jsx'
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import renderRoute from './router/renderRoute.jsx'
@@ -30,6 +30,7 @@ export default function App() {
     <a href="#main-content" className="skip-link" onClick={e => { e.preventDefault(); document.getElementById('main-content')?.focus() }}>Skip to content</a>
     <Header navigate={navigate} route={route} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
     {online===false && route!=='/dashboard' && <div className="content-offline" role="status">Latest updates are unavailable. Preview details are shown; please confirm prices and times with admissions.</div>}
+    {route!=='/dashboard' && <div className="site-contact-bar"><div className="container"><span>{['/exam-registration','/mock-partial-registration','/facilities/registration-corner','/facilities/mock-test'].includes(route) ? 'Registration' : 'Admissions'}</span><PhoneLink/></div></div>}
     <main id="main-content" tabIndex="-1" key={route} className="route-content">{renderRoute(route, navigate)}</main>
     <Footer navigate={navigate}/>
     <MotionControl motion={motion} setMotion={setMotion}/>

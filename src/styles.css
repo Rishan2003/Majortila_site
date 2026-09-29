@@ -24,3 +24,10 @@ html[data-motion=off]{scroll-behavior:auto}html[data-motion=off] *,html[data-mot
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.will-reveal{opacity:1;transform:none}.hero-slide>img{transform:none}}
 
 @media(hover:hover){.editorial-course.is-visible:hover,.resource-card.is-visible:hover,.facility-card.is-visible:hover,.course-card-grid>article.is-visible:hover{transform:translateY(-7px)}}
+/* User-supplied course and facility photography. */
+.course-card-photo,.facility-card-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin-bottom:20px}
+.facility-detail-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin-bottom:24px}
+.facility-statement{min-width:0}
+.nav-dropdown .dropdown-panel{max-height:min(75vh,640px);overflow-y:auto}
+
+.site-contact-bar{background:#f4f5fc;border-bottom:1px solid #dce0ef;padding:10px 0;font-size:13px}.site-contact-bar>.container{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.site-contact-bar span{font-weight:600}.site-contact-bar a{color:#292b78;font-weight:600}.site-contact-bar a[href*="wa.me"]{color:#126d3c}.footer-intro>a[href*="wa.me"]{display:block;margin-top:12px}.contact-info>a[href*="wa.me"]{font-weight:600;color:#126d3c;margin-bottom:22px}.mobile-menu>a[href*="wa.me"]{color:#126d3c}@media(max-width:600px){.site-contact-bar>.container{justify-content:center;gap:8px 14px}.site-contact-bar span{width:100%;text-align:center;font-size:11px}}

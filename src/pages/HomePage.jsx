@@ -1,3 +1,4 @@
+import { coursePhotos } from '../data/coursePhotos.js'
 import Arrow from '../components/ui/Arrow.jsx'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import CtaBand from '../components/ui/CtaBand.jsx'
@@ -16,7 +17,7 @@ export default function HomePage({ navigate }) {
     <div className="ticker" aria-label="IELTS Academic, Spoken English, IELTS on Computer, Intensive preparation, Student care"><div className="ticker-track" aria-hidden="true">{[0,1].map(n=><div className="ticker-group" key={n}>{['IELTS Academic','Spoken English','IELTS on Computer','Intensive preparation','Student care'].map(t=><span key={t}>{t}<b>✦</b></span>)}</div>)}</div></div>
     <section className="home-courses paper-section"><div className="container">
       <div className="split-heading"><SectionHeading label="02 / FIND YOUR DIRECTION" title="Different goals." accent="One great place to start."/><button className="button button-outline" onClick={() => navigate('/courses')}>All {courses.length} programs <Arrow/></button></div>
-      <div className="editorial-courses">{featured.map((course,i)=><article key={course.title} className="editorial-course reveal"><a href="#/courses" className="course-photo" aria-label={`Explore ${course.title}`}><img src={`./images/${photos[i]}`} alt={photoAlts[i]} loading="lazy" width="640" height="440"/><span>{course.accent}</span><span className="circle-arrow"><Arrow/></span></a><div className="editorial-course-body"><div className="course-eyebrow"><span>0{i+1} / {course.group}</span><span>{course.duration}</span></div><h3>{course.title}</h3><p lang="bn">{course.desc}</p><div className="home-course-fee"><span>Discounted fee <strong>{course.discountFee}</strong></span><span>Course fee <del>{course.fee}</del></span></div><button onClick={() => navigate('/courses')}>Explore the program <Arrow size={18}/></button></div></article>)}</div>
+      <div className="editorial-courses">{featured.map((course,i)=><article key={course.title} className="editorial-course reveal"><a href="#/courses" className="course-photo" aria-label={`Explore ${course.title}`}><img src={`./images/${coursePhotos[course.id] || photos[i]}`} alt={coursePhotos[course.id] ? `${course.title} at HEXA’S Majortila` : photoAlts[i]} loading="lazy" width="640" height="440"/><span>{course.accent}</span><span className="circle-arrow"><Arrow/></span></a><div className="editorial-course-body"><div className="course-eyebrow"><span>0{i+1} / {course.group}</span><span>{course.duration}</span></div><h3>{course.title}</h3><p lang="bn">{course.desc}</p><div className="home-course-fee"><span>Discounted fee <strong>{course.discountFee}</strong></span><span>Course fee <del>{course.fee}</del></span></div><button onClick={() => navigate('/courses')}>Explore the program <Arrow size={18}/></button></div></article>)}</div>
     </div></section>
     <section className="experience-section" id="campus"><div className="container experience-grid">
       <div className="experience-media reveal" data-parallax><img src="./images/venue2.webp" alt="HEXA’S IELTS on Computer test centre entrance in Majortila" loading="lazy" width="900" height="1100"/><span className="photo-label">YOUR CAMPUS. YOUR NEXT CHAPTER.</span><div className="experience-inset"><img src="./images/venue.webp" alt="Computer workstations inside the IELTS test venue" loading="lazy" width="350" height="240"/></div></div>
@@ -34,7 +35,7 @@ export default function HomePage({ navigate }) {
           <button className="button button-primary" onClick={() => navigate('/exam-registration')}>IELTS registration <Arrow/></button>
         </div>
         <figure className="home-registration-photo reveal">
-          <div className="home-registration-image"><img src="./images/venue2.webp" alt="HEXA’S IELTS on Computer test centre entrance in Majortila" loading="lazy" width="1280" height="960"/></div>
+          <div className="home-registration-image"><img src="./images/registration-corner.jpg" alt="IELTS Registration Corner at HEXA’S Majortila" loading="lazy" width="1280" height="960"/></div>
           <figcaption><span>HEXA’S MAJORTILA</span><span>আপনার next chapter শুরু এখানেই। <Arrow size={18}/></span></figcaption>
         </figure>
       </div>

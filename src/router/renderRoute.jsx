@@ -1,3 +1,5 @@
+import { facilities } from '../data/facilities.js'
+import FacilityDetailPage from '../pages/facilities/FacilityDetailPage.jsx'
 import DashboardPage from '../pages/DashboardPage.jsx'
 import PracticeRegistrationPage from '../pages/PracticeRegistrationPage.jsx'
 import HomePage from '../pages/HomePage.jsx'
@@ -44,6 +46,8 @@ export default function renderRoute(route, navigate) {
     const FacilityPage = facilityRoutes[route]
     return <FacilityPage navigate={navigate} />
   }
+  const facility = route.startsWith('/facilities/') && facilities[route.split('/').pop()]
+  if (facility) return <FacilityDetailPage facility={facility} navigate={navigate} />
   if (route === '/exam-registration') return <ExamRegistrationPage navigate={navigate} />
   if (route === '/contact') return <ContactPage />
   return <NotFoundPage navigate={navigate} />
